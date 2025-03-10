@@ -12,7 +12,6 @@
 		E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B02A2D7F0DE500192426 /* ViewController.swift */; };
 		E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E271B0232D7F0DE500192426 /* Assets.xcassets */; };
 		E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */; };
-		E271B0322D7F0DE500192426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E271B0282D7F0DE500192426 /* Main.storyboard */; };
 		E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */; };
 		E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */; };
 		E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */; };
@@ -24,7 +23,6 @@
 		E271B0232D7F0DE500192426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E271B0242D7F0DE500192426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E271B0252D7F0DE500192426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E271B0272D7F0DE500192426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E271B0292D7F0DE500192426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E271B02A2D7F0DE500192426 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */,
-				E271B0282D7F0DE500192426 /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -195,7 +192,6 @@
 			files = (
 				E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */,
 				E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */,
-				E271B0322D7F0DE500192426 /* Main.storyboard in Resources */,
 				E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */,
 				E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */,
 				E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */,
@@ -226,14 +222,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		E271B0282D7F0DE500192426 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E271B0272D7F0DE500192426 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -248,7 +236,7 @@
 				INFOPLIST_FILE = "upcoming-events/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -275,7 +263,7 @@
 				INFOPLIST_FILE = "upcoming-events/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
