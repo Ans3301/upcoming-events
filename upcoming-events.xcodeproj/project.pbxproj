@@ -13,6 +13,9 @@
 		E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E271B0232D7F0DE500192426 /* Assets.xcassets */; };
 		E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */; };
 		E271B0322D7F0DE500192426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E271B0282D7F0DE500192426 /* Main.storyboard */; };
+		E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */; };
+		E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */; };
+		E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E271B0272D7F0DE500192426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E271B0292D7F0DE500192426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E271B02A2D7F0DE500192426 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		E271B0392D7F0E7100192426 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E271B03C2D7F10AA00192426 /* Fonts */,
 				E271B0232D7F0DE500192426 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -113,6 +120,16 @@
 				E271B0282D7F0DE500192426 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E271B03C2D7F10AA00192426 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */,
+				E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */,
+				E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +196,9 @@
 				E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */,
 				E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */,
 				E271B0322D7F0DE500192426 /* Main.storyboard in Resources */,
+				E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */,
+				E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */,
+				E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
