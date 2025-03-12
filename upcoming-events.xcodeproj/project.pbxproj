@@ -15,6 +15,8 @@
 		E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */; };
 		E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */; };
 		E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */; };
+		E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E271B0442D7F13F200192426 /* SwifterSwift */; };
+		E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B04A2D81AE7600192426 /* PeriodButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E271B04A2D81AE7600192426 /* PeriodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 		E271B0372D7F0E5100192426 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E271B04A2D81AE7600192426 /* PeriodButton.swift */,
 				E271B03B2D7F0EA900192426 /* Storyboard */,
 			);
 			path = View;
@@ -146,6 +151,7 @@
 			);
 			name = "upcoming-events";
 			packageProductDependencies = (
+				E271B0442D7F13F200192426 /* SwifterSwift */,
 			);
 			productName = "upcoming-events";
 			productReference = E271AFFA2D7F04E900192426 /* upcoming-events.app */;
@@ -175,6 +181,9 @@
 			);
 			mainGroup = E271AFF12D7F04E900192426;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E271AFFB2D7F04E900192426 /* Products */;
 			projectDirPath = "";
@@ -206,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E271B02C2D7F0DE500192426 /* AppDelegate.swift in Sources */,
+				E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */,
 				E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */,
 				E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */,
 			);
@@ -420,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E271B0442D7F13F200192426 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E271AFF22D7F04E900192426 /* Project object */;
 }
