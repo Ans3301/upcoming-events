@@ -5,6 +5,7 @@
 //  Created by Мария Анисович on 10.03.2025.
 //
 
+import EventKit
 import SwifterSwift
 import UIKit
 
@@ -33,7 +34,31 @@ final class ViewController: UIViewController {
         stackView.distribution = .fillProportionally
         return stackView
     }()
-        
+    
+    private lazy var dateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .clear
+        label.textAlignment = .left
+        label.font = UIFont(name: "Poppins-SemiBold", size: 20)
+        label.textColor = .black
+        return label
+    }()
+    
+    private lazy var calendarView: CustomCalendarView = {
+        let calendar = CustomCalendarView()
+        calendar.translatesAutoresizingMaskIntoConstraints = false
+        return calendar
+    }()
+    
+    private var collectionView: UICollectionView!
+    
+    private var events: [EKEvent] = []
+    private var timer: Timer?
+    
+    private var dateLabelTopConstraint: NSLayoutConstraint!
+    private var collectionViewTopConstraint: NSLayoutConstraint!
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +66,43 @@ final class ViewController: UIViewController {
         
         setupTitleLabel()
         setupStackView()
+        setupDateLabel()
+        setupCollectionView()
+        
+        buttonTapped(weekButton)
+    }
+    
+    private func fetchEvents(endOfPeriod: Date) {
+        let today = Date()
+        fetchEvents(startOfPeriod: today, endOfPeriod: endOfPeriod)
+    }
+    
+    private func fetchEvents(startOfPeriod: Date, endOfPeriod: Date) {
+        let eventStore = EKEventStore()
+
+        eventStore.requestAccess(to: .event) { granted, error in
+            guard granted, error == nil else {
+                print("Access to calendar denied or error occurred: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+            
+            let predicate = eventStore.predicateForEvents(withStart: startOfPeriod, end: endOfPeriod, calendars: nil)
+            self.events = eventStore.events(matching: predicate)
+            
+            DispatchQueue.main.async {
+                self.collectionView.isHidden = false
+                self.collectionView.reloadData()
+                self.startTimer()
+            }
+        }
+    }
+    
+    private func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimers), userInfo: nil, repeats: true)
+    }
+        
+    @objc private func updateTimers() {
+        collectionView.reloadData()
     }
     
     private func setupTitleLabel() {
@@ -82,5 +144,180 @@ final class ViewController: UIViewController {
                 b.isSelected = false
             }
         }
+        
+        let calendar = Calendar.current
+        let today = Date()
+        var endOfPeriod: Date?
+        
+        if button == customButton {
+            dateLabelTopConstraint.constant = 585
+            collectionViewTopConstraint.constant = 625
+            
+            dateLabel.layoutIfNeeded()
+            collectionView.layoutIfNeeded()
+            
+            setupCalendarView()
+            
+            dateLabel.text = ""
+            collectionView.isHidden = true
+        } else {
+            calendarView.resetSelection()
+            calendarView.removeFromSuperview()
+            
+            dateLabelTopConstraint.constant = 189
+            collectionViewTopConstraint.constant = 229
+            
+            dateLabel.layoutIfNeeded()
+            collectionView.layoutIfNeeded()
+            
+            if button == weekButton {
+                endOfPeriod = calendar.date(byAdding: .day, value: 7, to: today)
+            } else if button == monthButton {
+                endOfPeriod = calendar.date(byAdding: .month, value: 1, to: today)
+            } else if button == yearButton {
+                endOfPeriod = calendar.date(byAdding: .year, value: 1, to: today)
+            }
+            
+            if let end = endOfPeriod {
+                fetchEvents(endOfPeriod: end)
+                dateLabel.text = formattedDateRange(from: today, to: end)
+            }
+        }
+    }
+    
+    private func formattedDateRange(from startDate: Date, to endDate: Date) -> String {
+        let monthDayYearFormatter = DateFormatter()
+        monthDayYearFormatter.dateFormat = "MMM d, yyyy"
+
+        let startDateString = formattedDate(date: startDate)
+        let endDateString = formattedDate(date: endDate)
+
+        return "\(startDateString) - \(endDateString)"
+    }
+    
+    private func formattedDate(date: Date) -> String {
+        let monthDayYearFormatter = DateFormatter()
+        monthDayYearFormatter.dateFormat = "MMM d, yyyy"
+        return monthDayYearFormatter.string(from: date)
+    }
+    
+    private func setupDateLabel() {
+        view.addSubview(dateLabel)
+        
+        dateLabelTopConstraint = dateLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 189)
+
+        NSLayoutConstraint.activate([
+            dateLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            dateLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
+            dateLabelTopConstraint
+        ])
+    }
+    
+    private func setupCalendarView() {
+        calendarView.customDelegate = self
+        
+        view.addSubview(calendarView)
+        
+        NSLayoutConstraint.activate([
+            calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 181),
+            calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            calendarView.heightAnchor.constraint(equalToConstant: 380)
+        ])
+    }
+    
+    private func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.estimatedItemSize = .zero
+        layout.minimumLineSpacing = 8
+
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .clear
+        
+        collectionView.register(EventCollectionViewCell.self, forCellWithReuseIdentifier: "eventCollectionViewCell")
+        
+        view.addSubview(collectionView)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionViewTopConstraint = collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 229)
+        
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionViewTopConstraint
+        ])
+    }
+    
+    deinit {
+        timer?.invalidate()
+    }
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventCollectionViewCell", for: indexPath) as? EventCollectionViewCell else {
+            fatalError("Unable to dequeue eventCollectionViewCell")
+        }
+        cell.configure(text: events[indexPath.item].title, remainingTime: getRemainingTime(event: events[indexPath.item]))
+        return cell
+    }
+    
+    private func getRemainingTime(event: EKEvent) -> String {
+        let timeInterval = event.startDate.timeIntervalSinceNow
+        
+        if timeInterval <= 0 {
+            return "Started"
+        } else {
+            return formatTimeInterval(interval: timeInterval)
+        }
+    }
+    
+    private func formatTimeInterval(interval: TimeInterval) -> String {
+        let totalMinutes = Int(interval) / 60
+        let totalHours = totalMinutes / 60
+        let days = totalHours / 24
+        let hours = totalHours % 24
+        let minutes = totalMinutes % 60
+                
+        if days > 0 {
+            return days < 5 ? "\(days) d \(hours)h" : "\(days) days"
+        } else if hours > 0 {
+            return minutes > 0 ? "\(hours) h \(minutes)m" : "\(hours) hours"
+        } else if minutes > 0 {
+            return "\(minutes)m"
+        } else {
+            return "Less than a minute"
+        }
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSizeMake(view.frame.width - 32, 48)
+    }
+}
+
+extension ViewController: CustomCalendarViewDelegate {
+    func didSelectDate(date: Date) {
+        let calendar = Calendar.current
+        let endOfDay = calendar.date(byAdding: .day, value: 1, to: date)
+        if let end = endOfDay {
+            fetchEvents(startOfPeriod: date, endOfPeriod: end)
+            dateLabel.text = formattedDate(date: date)
+        }
+    }
+    
+    func didSelectDateRange(startDate: Date, endDate: Date) {
+        fetchEvents(startOfPeriod: startDate, endOfPeriod: endDate)
+        dateLabel.text = formattedDateRange(from: startDate, to: endDate)
     }
 }

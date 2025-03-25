@@ -17,6 +17,9 @@
 		E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */; };
 		E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E271B0442D7F13F200192426 /* SwifterSwift */; };
 		E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B04A2D81AE7600192426 /* PeriodButton.swift */; };
+		E271B04D2D81F09700192426 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */; };
+		E271B0542D89980300192426 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E271B0532D89980300192426 /* FSCalendar */; };
+		E271B0562D89B2C700192426 /* CustomCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0552D89B2B800192426 /* CustomCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,8 @@
 		E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		E271B04A2D81AE7600192426 /* PeriodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodButton.swift; sourceTree = "<group>"; };
+		E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		E271B0552D89B2B800192426 /* CustomCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */,
+				E271B0542D89980300192426 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +92,9 @@
 		E271B0372D7F0E5100192426 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E271B0552D89B2B800192426 /* CustomCalendarView.swift */,
 				E271B04A2D81AE7600192426 /* PeriodButton.swift */,
+				E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */,
 				E271B03B2D7F0EA900192426 /* Storyboard */,
 			);
 			path = View;
@@ -152,6 +160,7 @@
 			name = "upcoming-events";
 			packageProductDependencies = (
 				E271B0442D7F13F200192426 /* SwifterSwift */,
+				E271B0532D89980300192426 /* FSCalendar */,
 			);
 			productName = "upcoming-events";
 			productReference = E271AFFA2D7F04E900192426 /* upcoming-events.app */;
@@ -183,6 +192,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E271AFFB2D7F04E900192426 /* Products */;
@@ -217,7 +227,9 @@
 				E271B02C2D7F0DE500192426 /* AppDelegate.swift in Sources */,
 				E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */,
 				E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */,
+				E271B04D2D81F09700192426 /* EventCollectionViewCell.swift in Sources */,
 				E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */,
+				E271B0562D89B2C700192426 /* CustomCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -447,6 +467,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
+		};
+		E271B0532D89980300192426 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
