@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E260A3FA2D92CE8E00F4B7BA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */; };
+		E260A3FE2D9306CE00F4B7BA /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3FD2D9306CA00F4B7BA /* InputView.swift */; };
 		E271B02C2D7F0DE500192426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0222D7F0DE500192426 /* AppDelegate.swift */; };
 		E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0292D7F0DE500192426 /* SceneDelegate.swift */; };
 		E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B02A2D7F0DE500192426 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		E260A3FD2D9306CA00F4B7BA /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E271AFFA2D7F04E900192426 /* upcoming-events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "upcoming-events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E271B0222D7F0DE500192426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E271B0232D7F0DE500192426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		E271B0372D7F0E5100192426 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E260A3FD2D9306CA00F4B7BA /* InputView.swift */,
 				E271B0552D89B2B800192426 /* CustomCalendarView.swift */,
 				E271B04A2D81AE7600192426 /* PeriodButton.swift */,
 				E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */,
@@ -103,6 +108,7 @@
 		E271B0382D7F0E5C00192426 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */,
 				E271B02A2D7F0DE500192426 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -228,6 +234,8 @@
 				E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */,
 				E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */,
 				E271B04D2D81F09700192426 /* EventCollectionViewCell.swift in Sources */,
+				E260A3FA2D92CE8E00F4B7BA /* AddEventViewController.swift in Sources */,
+				E260A3FE2D9306CE00F4B7BA /* InputView.swift in Sources */,
 				E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */,
 				E271B0562D89B2C700192426 /* CustomCalendarView.swift in Sources */,
 			);

@@ -19,6 +19,15 @@ final class ViewController: UIViewController {
         label.textColor = .black
         return label
     }()
+    
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .clear
+        button.setImage(UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 25, weight: .regular)), for: .normal)
+        button.tintColor = UIColor(hexString: "#5856D6")
+        return button
+    }()
  
     private var weekButton = PeriodButton()
     private var monthButton = PeriodButton()
@@ -65,6 +74,7 @@ final class ViewController: UIViewController {
         view.backgroundColor = .white
         
         setupTitleLabel()
+        setupAddButton()
         setupStackView()
         setupDateLabel()
         setupCollectionView()
@@ -113,6 +123,39 @@ final class ViewController: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 52),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    private func setupAddButton() {
+        view.addSubview(addButton)
+
+        NSLayoutConstraint.activate([
+            addButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -17)
+        ])
+        
+        addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func addButtonTapped(_ button: UIButton) {
+        let addEventViewController = AddEventViewController()
+        addEventViewController.afterSave = { [weak self] message in
+            if let self = self {
+                self.showAlert(message: message)
+                for b in self.buttons {
+                    if b.isSelected {
+                        self.buttonTapped(b)
+                        break
+                    }
+                }
+            }
+        }
+        present(addEventViewController, animated: true)
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Adding Event", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
     
     private func setupStackView() {
