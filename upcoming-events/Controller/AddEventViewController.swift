@@ -12,6 +12,7 @@ final class AddEventViewController: UIViewController {
     private lazy var navigationBar: UINavigationBar = {
         let navigationBar = UINavigationBar()
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        navigationBar.backgroundColor = .white
         return navigationBar
     }()
     

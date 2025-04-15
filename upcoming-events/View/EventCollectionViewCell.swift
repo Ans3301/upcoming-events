@@ -12,6 +12,7 @@ final class EventCollectionViewCell: UICollectionViewCell {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
         label.textAlignment = .left
         label.font = UIFont(name: "Poppins-Regular", size: 17)
         label.textColor = .black
@@ -21,6 +22,7 @@ final class EventCollectionViewCell: UICollectionViewCell {
     private lazy var timerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.isUserInteractionEnabled = true
         label.textAlignment = .right
         label.font = UIFont(name: "Poppins-Regular", size: 17)
         label.textColor = UIColor(hexString: "#5856D6")

@@ -20,6 +20,17 @@ final class ViewController: UIViewController {
         return label
     }()
     
+    private lazy var sharedEventsButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .clear
+        button.setTitle("Shared\nEvents", for: .normal)
+        button.setTitleColor(UIColor(hexString: "#5856D6"), for: .normal)
+        button.titleLabel?.lineBreakMode = .byWordWrapping
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()
+    
     private lazy var addButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -74,6 +85,7 @@ final class ViewController: UIViewController {
         view.backgroundColor = .white
         
         setupTitleLabel()
+        setupSharedEventsButton()
         setupAddButton()
         setupStackView()
         setupDateLabel()
@@ -123,6 +135,24 @@ final class ViewController: UIViewController {
             titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 52),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+    
+    private func setupSharedEventsButton() {  
+        view.addSubview(sharedEventsButton)
+        
+        NSLayoutConstraint.activate([
+            sharedEventsButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            sharedEventsButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 17)
+        ])
+        
+        sharedEventsButton.addTarget(self, action: #selector(sharedEventsButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func sharedEventsButtonTapped(_ button: UIButton) {
+        let sharedEventsViewController = SharedEventsViewController()
+        sharedEventsViewController.modalPresentationStyle = .overFullScreen
+        sharedEventsViewController.modalTransitionStyle = .crossDissolve
+        present(sharedEventsViewController, animated: true)
     }
     
     private func setupAddButton() {
@@ -340,6 +370,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             return "Less than a minute"
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let shareEventViewController = ShareEventViewController()
+        shareEventViewController.event = SharedEvent(title: events[indexPath.item].title, date: events[indexPath.item].startDate)
+        present(shareEventViewController, animated: true)
     }
 }
 

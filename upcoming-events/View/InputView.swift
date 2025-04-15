@@ -15,7 +15,9 @@ final class InputView: UIView {
         textField.borderStyle = .none
         textField.backgroundColor = .clear
         textField.placeholder = "Title"
+        textField.setPlaceHolderTextColor(.systemGray)
         textField.font = UIFont(name: "Poppins-Regular", size: 17)
+        textField.textColor = .black
         return textField
     }()
 
@@ -39,6 +41,7 @@ final class InputView: UIView {
     private lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.translatesAutoresizingMaskIntoConstraints = false
+        picker.tintColor = .black
         picker.datePickerMode = .dateAndTime
         picker.preferredDatePickerStyle = .compact
         picker.minimumDate = Date()

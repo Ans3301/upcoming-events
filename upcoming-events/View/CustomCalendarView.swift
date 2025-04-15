@@ -78,7 +78,9 @@ extension CustomCalendarView: FSCalendarDelegate, FSCalendarDataSource, FSCalend
                 if date > start {
                     self.endDate = date
                     self.selectRange(from: start, to: date)
-                    self.customDelegate?.didSelectDateRange(startDate: start, endDate: date)
+                    if let end = Calendar.current.date(byAdding: .day, value: 1, to: date) {
+                        self.customDelegate?.didSelectDateRange(startDate: start, endDate: end)
+                    }
                 } else {
                     calendar.deselect(start)
                     self.startDate = date
