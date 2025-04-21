@@ -6,36 +6,61 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E260A3FA2D92CE8E00F4B7BA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */; };
+		E260A3FE2D9306CE00F4B7BA /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A3FD2D9306CA00F4B7BA /* InputView.swift */; };
+		E260A4022D95CD9900F4B7BA /* ShareEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A4012D95CD9400F4B7BA /* ShareEventViewController.swift */; };
+		E260A4042D95CEC400F4B7BA /* SharedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A4032D95CEC100F4B7BA /* SharedEvent.swift */; };
+		E260A4062D95D43600F4B7BA /* ShareTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A4052D95D42900F4B7BA /* ShareTypeTableViewCell.swift */; };
+		E260A4082D9960D900F4B7BA /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A4072D9960D600F4B7BA /* QRCodeViewController.swift */; };
+		E260A40A2D9C837B00F4B7BA /* SharedEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A4092D9C836D00F4B7BA /* SharedEventsViewController.swift */; };
+		E260A40C2D9C864200F4B7BA /* SharedEventsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E260A40B2D9C862D00F4B7BA /* SharedEventsStorage.swift */; };
+		E271B02C2D7F0DE500192426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0222D7F0DE500192426 /* AppDelegate.swift */; };
+		E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0292D7F0DE500192426 /* SceneDelegate.swift */; };
+		E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B02A2D7F0DE500192426 /* ViewController.swift */; };
+		E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E271B0232D7F0DE500192426 /* Assets.xcassets */; };
+		E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */; };
+		E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */; };
+		E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */; };
+		E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */; };
+		E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E271B0442D7F13F200192426 /* SwifterSwift */; };
+		E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B04A2D81AE7600192426 /* PeriodButton.swift */; };
+		E271B04D2D81F09700192426 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */; };
+		E271B0542D89980300192426 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = E271B0532D89980300192426 /* FSCalendar */; };
+		E271B0562D89B2C700192426 /* CustomCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E271B0552D89B2B800192426 /* CustomCalendarView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		E260A3FD2D9306CA00F4B7BA /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		E260A4012D95CD9400F4B7BA /* ShareEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareEventViewController.swift; sourceTree = "<group>"; };
+		E260A4032D95CEC100F4B7BA /* SharedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedEvent.swift; sourceTree = "<group>"; };
+		E260A4052D95D42900F4B7BA /* ShareTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTypeTableViewCell.swift; sourceTree = "<group>"; };
+		E260A4072D9960D600F4B7BA /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		E260A4092D9C836D00F4B7BA /* SharedEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedEventsViewController.swift; sourceTree = "<group>"; };
+		E260A40B2D9C862D00F4B7BA /* SharedEventsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedEventsStorage.swift; sourceTree = "<group>"; };
 		E271AFFA2D7F04E900192426 /* upcoming-events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "upcoming-events.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E271B0222D7F0DE500192426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E271B0232D7F0DE500192426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E271B0242D7F0DE500192426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E271B0252D7F0DE500192426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E271B0292D7F0DE500192426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E271B02A2D7F0DE500192426 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E271B04A2D81AE7600192426 /* PeriodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodButton.swift; sourceTree = "<group>"; };
+		E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		E271B0552D89B2B800192426 /* CustomCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E271B00C2D7F04EB00192426 /* Exceptions for "upcoming-events" folder in "upcoming-events" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = E271AFF92D7F04E900192426 /* upcoming-events */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E271AFFC2D7F04E900192426 /* upcoming-events */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				E271B00C2D7F04EB00192426 /* Exceptions for "upcoming-events" folder in "upcoming-events" target */,
-			);
-			path = "upcoming-events";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E271AFF72D7F04E900192426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E271B0452D7F13F200192426 /* SwifterSwift in Frameworks */,
+				E271B0542D89980300192426 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +70,7 @@
 		E271AFF12D7F04E900192426 = {
 			isa = PBXGroup;
 			children = (
-				E271AFFC2D7F04E900192426 /* upcoming-events */,
+				E271B02B2D7F0DE500192426 /* upcoming-events */,
 				E271AFFB2D7F04E900192426 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +81,89 @@
 				E271AFFA2D7F04E900192426 /* upcoming-events.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E271B02B2D7F0DE500192426 /* upcoming-events */ = {
+			isa = PBXGroup;
+			children = (
+				E271B0222D7F0DE500192426 /* AppDelegate.swift */,
+				E271B0292D7F0DE500192426 /* SceneDelegate.swift */,
+				E271B0242D7F0DE500192426 /* Info.plist */,
+				E271B0362D7F0E4600192426 /* Model */,
+				E271B0372D7F0E5100192426 /* View */,
+				E271B0382D7F0E5C00192426 /* Controller */,
+				E271B0392D7F0E7100192426 /* Resources */,
+				E271B03A2D7F0E7E00192426 /* Helpers */,
+			);
+			path = "upcoming-events";
+			sourceTree = "<group>";
+		};
+		E271B0362D7F0E4600192426 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E260A40B2D9C862D00F4B7BA /* SharedEventsStorage.swift */,
+				E260A4032D95CEC100F4B7BA /* SharedEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E271B0372D7F0E5100192426 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E260A4052D95D42900F4B7BA /* ShareTypeTableViewCell.swift */,
+				E260A3FD2D9306CA00F4B7BA /* InputView.swift */,
+				E271B0552D89B2B800192426 /* CustomCalendarView.swift */,
+				E271B04A2D81AE7600192426 /* PeriodButton.swift */,
+				E271B04C2D81F09700192426 /* EventCollectionViewCell.swift */,
+				E271B03B2D7F0EA900192426 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E271B0382D7F0E5C00192426 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E260A4092D9C836D00F4B7BA /* SharedEventsViewController.swift */,
+				E260A4072D9960D600F4B7BA /* QRCodeViewController.swift */,
+				E260A4012D95CD9400F4B7BA /* ShareEventViewController.swift */,
+				E260A3F92D92CE3800F4B7BA /* AddEventViewController.swift */,
+				E271B02A2D7F0DE500192426 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E271B0392D7F0E7100192426 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E271B03C2D7F10AA00192426 /* Fonts */,
+				E271B0232D7F0DE500192426 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E271B03A2D7F0E7E00192426 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E271B03B2D7F0EA900192426 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E271B03C2D7F10AA00192426 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E271B0412D7F10E500192426 /* Poppins-SemiBold.ttf */,
+				E271B03F2D7F10D300192426 /* Poppins-Medium.ttf */,
+				E271B03D2D7F10C100192426 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,11 +181,10 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				E271AFFC2D7F04E900192426 /* upcoming-events */,
-			);
 			name = "upcoming-events";
 			packageProductDependencies = (
+				E271B0442D7F13F200192426 /* SwifterSwift */,
+				E271B0532D89980300192426 /* FSCalendar */,
 			);
 			productName = "upcoming-events";
 			productReference = E271AFFA2D7F04E900192426 /* upcoming-events.app */;
@@ -107,6 +214,10 @@
 			);
 			mainGroup = E271AFF12D7F04E900192426;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E271AFFB2D7F04E900192426 /* Products */;
 			projectDirPath = "";
@@ -122,6 +233,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E271B02F2D7F0DE500192426 /* Assets.xcassets in Resources */,
+				E271B0312D7F0DE500192426 /* LaunchScreen.storyboard in Resources */,
+				E271B0422D7F10E500192426 /* Poppins-SemiBold.ttf in Resources */,
+				E271B03E2D7F10C100192426 /* Poppins-Regular.ttf in Resources */,
+				E271B0402D7F10D300192426 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +248,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E271B02C2D7F0DE500192426 /* AppDelegate.swift in Sources */,
+				E260A40C2D9C864200F4B7BA /* SharedEventsStorage.swift in Sources */,
+				E271B04B2D81AE9500192426 /* PeriodButton.swift in Sources */,
+				E260A4022D95CD9900F4B7BA /* ShareEventViewController.swift in Sources */,
+				E260A4042D95CEC400F4B7BA /* SharedEvent.swift in Sources */,
+				E271B02D2D7F0DE500192426 /* SceneDelegate.swift in Sources */,
+				E271B04D2D81F09700192426 /* EventCollectionViewCell.swift in Sources */,
+				E260A4082D9960D900F4B7BA /* QRCodeViewController.swift in Sources */,
+				E260A3FA2D92CE8E00F4B7BA /* AddEventViewController.swift in Sources */,
+				E260A3FE2D9306CE00F4B7BA /* InputView.swift in Sources */,
+				E271B02E2D7F0DE500192426 /* ViewController.swift in Sources */,
+				E260A40A2D9C837B00F4B7BA /* SharedEventsViewController.swift in Sources */,
+				E260A4062D95D43600F4B7BA /* ShareTypeTableViewCell.swift in Sources */,
+				E271B0562D89B2C700192426 /* CustomCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E271B0262D7F0DE500192426 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E271B0252D7F0DE500192426 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E271B00E2D7F04EB00192426 /* Debug */ = {
@@ -145,13 +286,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BL85AR9497;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upcoming-events/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -172,13 +314,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BL85AR9497;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upcoming-events/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +476,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E271B0442D7F13F200192426 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E271B0432D7F13F200192426 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		E271B0532D89980300192426 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E271B0522D89980300192426 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E271AFF22D7F04E900192426 /* Project object */;
 }
